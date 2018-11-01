@@ -8,7 +8,7 @@ import java.util.*;
  * @date 2016/3/7
  * 列表工具类
  */
-public class ListUtils {
+public class ListUtils extends CollectionUtils {
 
     /**
      * 构造arraylist对象

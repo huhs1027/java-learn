@@ -52,4 +52,23 @@ public class RandomUtils {
         return randomNumber;
     }
 
+    /**
+     * 获得包含大、小写字母或数字的字符串
+     *
+     * @param length
+     * @return
+     */
+    public static String makeCharCodeRandom(int length) {
+        //数字和字母的组合
+        String charBank = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjklmnpqrstuvwxyz";
+        StringBuilder sb = new StringBuilder();
+        String ch = "";
+        // 控制字数
+        for (int i = 0; i < length; i++) {
+            ch = charBank.charAt(new Random().nextInt(charBank.length())) + "";
+            sb.append(ch);
+        }
+        return sb.toString();
+    }
+
 }

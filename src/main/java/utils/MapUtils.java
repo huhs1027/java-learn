@@ -19,7 +19,7 @@ public class MapUtils {
      * @return
      */
     public static <K, V> Map<K, V> newHashMap() {
-        return new HashMap<>();
+        return new HashMap<>(16);
     }
 
     /**
