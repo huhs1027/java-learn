@@ -16,7 +16,7 @@ import java.util.List;
  * @author huhongsen
  * @date 2018/12/7
  */
-public class CheckInUtils {
+public class CheckBeanUtils {
 
     public static void checkBean(Object bean) throws IllegalAccessException {
         if (bean == null) {

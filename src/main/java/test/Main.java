@@ -1,6 +1,6 @@
 package test;
 
-import annotation.utils.CheckInUtils;
+import annotation.utils.CheckBeanUtils;
 import annotation.FieldNotNull;
 import annotation.FieldNumberScope;
 
@@ -13,7 +13,7 @@ public class Main {
         Person person = new Person();
         person.setName("asdfasdf");
         person.setAge(101);
-        CheckInUtils.checkBean(person);
+        CheckBeanUtils.checkBean(person);
     }
 
     public static class Person {
