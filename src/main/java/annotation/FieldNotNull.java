@@ -1,4 +1,4 @@
-package annotation.check;
+package annotation;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
@@ -11,11 +11,11 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 @Target({FIELD})
 @Retention(RUNTIME)
 @Documented
-public @interface FieldInArray {
+public @interface FieldNotNull {
 
+    //字段名
     String name() default "";
 
+    //校验不通过提示文案.
     String message() default "";
-
-    String[] array() default {};
 }

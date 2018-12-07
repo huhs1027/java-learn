@@ -1,4 +1,4 @@
-package annotation.check;
+package annotation;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
@@ -17,7 +17,7 @@ public @interface FieldNumberScope {
 
     String message() default "";
 
-    String from() default "";
+    int from() default 0;
 
-    String to() default "";
+    int to() default Integer.MAX_VALUE;
 }

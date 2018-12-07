@@ -1,4 +1,4 @@
-package annotation.check;
+package annotation;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
@@ -11,9 +11,7 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 @Target({FIELD})
 @Retention(RUNTIME)
 @Documented
-public @interface FieldNotNull {
-
-    int maxLength() default 0;
+public @interface FieldMobile {
 
     String name() default "";
 
