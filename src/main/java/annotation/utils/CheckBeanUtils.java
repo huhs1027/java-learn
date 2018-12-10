@@ -79,8 +79,8 @@ public class CheckBeanUtils {
             String[] realValue = (String[]) value;
             for (String str : realValue) {
                 boolean has = false;
-                for (int i = 0; i < array.length; i++) {
-                    if (array[i].equals(str)) {
+                for (String s : array) {
+                    if (s.equals(str)) {
                         has = true;
                         break;
                     }
@@ -90,6 +90,7 @@ public class CheckBeanUtils {
                     tips(field, annotation.name(), annotation.message(), "值" + str + "必须在数组" + Arrays.toString(realValue) + "内");
                 }
             }
+
         }
     }
 
