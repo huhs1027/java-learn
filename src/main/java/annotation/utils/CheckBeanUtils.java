@@ -1,5 +1,6 @@
 package annotation.utils;
 
+import annotation.FieldInArray;
 import annotation.FieldNotNull;
 import annotation.FieldNumberScope;
 import utils.ListUtils;
@@ -59,7 +60,37 @@ public class CheckBeanUtils {
         checkNotNull(field, bean);
         //范围校验
         checkNumberScope(field, bean);
+        //数组校验
+        checkArray(field, bean);
         //其他需要校验的 可以自行定义注解及方法
+    }
+
+    /**
+     * 校验
+     */
+    private static void checkArray(Field field, Object bean) throws IllegalAccessException {
+        if (!field.isAnnotationPresent(FieldInArray.class)) {
+            return;
+        }
+        FieldInArray annotation = field.getAnnotation(FieldInArray.class);
+        String[] array = annotation.array();
+        Object value = field.get(bean);
+        if (value != null && value instanceof String[]) {
+            String[] realValue = (String[]) value;
+            for (String str : realValue) {
+                boolean has = false;
+                for (int i = 0; i < array.length; i++) {
+                    if (array[i].equals(str)) {
+                        has = true;
+                        break;
+                    }
+                }
+                //判断是否在范围内
+                if (!has) {
+                    tips(field, annotation.name(), annotation.message(), "值" + str + "必须在数组" + Arrays.toString(realValue) + "内");
+                }
+            }
+        }
     }
 
     /**
