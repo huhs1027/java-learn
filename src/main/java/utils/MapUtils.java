@@ -9,7 +9,7 @@ import java.util.Map;
  * @date 2018/2/7
  * 键值对工具类
  */
-public class MapUtils {
+public final class MapUtils {
 
     /**
      * 构造hashMap

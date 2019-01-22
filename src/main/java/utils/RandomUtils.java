@@ -7,7 +7,7 @@ import java.util.Random;
  * @date 2018/2/7
  * 随机数工具类
  */
-public class RandomUtils {
+public final class RandomUtils {
 
     /**
      * 获取随机数数组(不重复)

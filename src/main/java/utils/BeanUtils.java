@@ -10,7 +10,7 @@ import java.util.List;
  * @author huhongsen
  * @date 2018/11/1
  */
-public class BeanUtils {
+public final class BeanUtils {
 
     /**
      * 获取类对象名

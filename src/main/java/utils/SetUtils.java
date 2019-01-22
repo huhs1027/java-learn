@@ -9,7 +9,7 @@ import java.util.Set;
  * @date 2017/2/7
  * 哈希工具类
  */
-public class SetUtils extends CollectionUtils {
+public final class SetUtils extends CollectionUtils {
 
     /**
      * 构造hashSet并返回

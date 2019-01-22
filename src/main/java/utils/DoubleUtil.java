@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 /**
  * Created by guozhenbin on 17/5/15.
  */
-public class DoubleUtil {
+public final class DoubleUtil {
 
     private static final int DEF_DIV_SCALE = 10;
 

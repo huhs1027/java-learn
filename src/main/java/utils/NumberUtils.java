@@ -6,7 +6,7 @@ package utils;
  * @author huhongsen
  * @date 2018/12/7
  */
-public class NumberUtils {
+public final class NumberUtils {
 
     public static boolean checkIsNumber(Object obj) {
         if (obj == null) {

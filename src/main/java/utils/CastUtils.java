@@ -11,7 +11,7 @@ import java.util.Map;
  * @date 2017/3/7
  */
 @SuppressWarnings("unchecked")
-public class CastUtils {
+public final class CastUtils {
 
     /**
      * 强转

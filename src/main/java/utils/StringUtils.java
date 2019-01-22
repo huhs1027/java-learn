@@ -1,11 +1,13 @@
 package utils;
 
+import java.util.Formatter;
+
 /**
  * @author huhongsen
  * @date 2016/2/1
  * 字符串工具类
  */
-public class StringUtils {
+public final class StringUtils {
 
     /**
      * 判断字符串是否为空
@@ -77,5 +79,18 @@ public class StringUtils {
             }
         }
         return sb.toString();
+    }
+
+    /**
+     * 2进制数组转换16进制字符串
+     */
+    public static String bytesToHex(byte[] hash) {
+        Formatter formatter = new Formatter();
+        for (byte b : hash) {
+            formatter.format("%02x", b);
+        }
+        String result = formatter.toString();
+        formatter.close();
+        return result;
     }
 }
