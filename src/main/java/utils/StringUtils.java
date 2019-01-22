@@ -39,15 +39,12 @@ public final class StringUtils {
         if (str == null || str.length() == 0) {
             return true;
         }
-        char[] chars = str.toCharArray();
-        boolean flag = true;
-        for (char ac : chars) {
-            if (ac != 32) {
-                flag = false;
-                break;
+        for (int i = 0; i < str.length(); i++) {
+            if (!Character.isWhitespace(str.charAt(i))) {
+                return false;
             }
         }
-        return flag;
+        return true;
     }
 
     /**
